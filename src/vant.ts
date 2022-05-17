@@ -458,7 +458,7 @@ export const COMPONENTS = {
     'safe-area-inset-top': 'true',
   },
   'van-sidebar': {
-    activeKey: '0',
+    'active-key': '0',
   },
   'van-sidebar-item': {
     dot: 'false',
