@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es2017",
+    "module": "esnext",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "compileOnSave": false
+}
