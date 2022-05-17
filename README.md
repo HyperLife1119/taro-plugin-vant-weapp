@@ -2,6 +2,12 @@
 
 一个用于补充 vant-weapp 组件属性的默认值的 taro 插件。
 
+## 安装
+
+```bash
+npm i taro-plugin-vant-weapp
+```
+
 ## 用法
 
 ### 1. 配置插件
