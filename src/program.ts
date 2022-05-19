@@ -88,8 +88,8 @@ function buildThirdPartyAttr(compName: string, attrs: Set<string>) {
     }
 
     // KEY CODE
-    const hasDefaultValue = toCamelCase(attr) in (COMPONENTS[compName] || {});
-    const attrValue = hasDefaultValue ? `xs.b(i.${toCamelCase(attr)},${COMPONENTS[compName][toCamelCase(attr)]})` : `i.${toCamelCase(attr)}`;
+    const hasDefaultValue = toKebabCase(attr) in (COMPONENTS[compName] || {});
+    const attrValue = hasDefaultValue ? `xs.b(i.${toCamelCase(attr)},${COMPONENTS[compName][toKebabCase(attr)]})` : `i.${toCamelCase(attr)}`;
     return str + `${attr}="{{${attrValue}}}" `
   }, '');
 }
