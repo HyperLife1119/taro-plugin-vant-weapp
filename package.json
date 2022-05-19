@@ -1,6 +1,6 @@
 {
   "name": "taro-plugin-vant-weapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A taro plugin to supplement default values for properties of vant-weapp components.",
   "main": "dist/index.js",
   "files": [
