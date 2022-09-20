@@ -1,6 +1,6 @@
 # taro-plugin-vant-weapp
 
-改进 vant-weapp 在 taro 中的使用体验。
+一个 taro 插件，用于改善 vant-weapp 在 taro 中的使用体验。
 
 ## 功能
 
