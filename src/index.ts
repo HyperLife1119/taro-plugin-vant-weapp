@@ -1,14 +1,23 @@
-import type { IPluginContext } from '@tarojs/service';
-import { VantWeapp } from './program';
+import type { IPluginContext, TaroPlatformBase } from '@tarojs/service';
+import { COMPONENTS, NEST_ELEMENTS } from './vant';
 
-export default (context: IPluginContext) => {
+interface Options {
+  components: Record<string, Record<string, any>>;
+  nestElements: Record<string, number>;
+}
 
-  context.registerPlatform({
-    name: 'vant-weapp',
-    useConfigName: 'mini',
-    async fn({ config }) {
-      const program = new VantWeapp(context, config);
-      await program.start();
+export default (context: IPluginContext, options: Options) => {
+  context.registerMethod({
+    name: 'onSetupClose',
+    fn({ template }: TaroPlatformBase) {
+      template.mergeThirdPartyComponents(
+        Object.assign(COMPONENTS, options.components)
+      );
+
+      const nestElements = Object.assign(NEST_ELEMENTS, options.nestElements);
+      Object.keys(nestElements).forEach(key => {
+        template.nestElements.set(key, nestElements[key]);
+      });
     }
-  })
+  });
 }

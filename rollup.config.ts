@@ -3,7 +3,7 @@ import { defineConfig } from 'rollup';
 
 export default defineConfig({
   input: 'src/index.ts',
-  external: ['@tarojs/shared', '@tarojs/service', '@tarojs/plugin-platform-weapp'],
+  external: ['@tarojs/shared', '@tarojs/service'],
   plugins: [
     typescript({
       removeComments: true
