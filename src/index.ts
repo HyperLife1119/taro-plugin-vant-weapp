@@ -20,4 +20,22 @@ export default (context: IPluginContext, options: Options) => {
       });
     }
   });
+
+  context.modifyBuildAssets(({ assets }) => {
+    const wxsOriginSource = assets['utils.wxs'].source();
+    const wxsNewSource = wxsOriginSource.replace(
+      'module.exports = {',
+      `module.exports = {
+  getDate: getDate,
+  getTime: function (date) { date ? date.getTime() : getDate().getTime(); },
+  today: getDate().setHours(0, 0, 0, 0),
+  fullYear: getDate().getFullYear(),
+  month: getDate().getMonth(),
+  date: getDate().getDate(),`
+    );
+    assets['utils.wxs'] = {
+      size: () => wxsNewSource.length,
+      source: () => wxsNewSource
+    };
+  });
 }
