@@ -1,7 +1,10 @@
 import { singleQuote } from '@tarojs/shared';
 
-const DEFAULT_TRUE = '!0'
-const DEFAULT_FALSE = '!1'
+const DEFAULT_TRUE = '!0';
+const DEFAULT_FALSE = '!1';
+const DEFAULT_EMPTY_ARRAY = '[]';
+
+// 同步版本：v1.10.19
 
 /** VANT 所有组件及其有默认值的属性 */
 export const COMPONENTS = {
@@ -37,6 +40,15 @@ export const COMPONENTS = {
     required: DEFAULT_FALSE,
     'use-label-slot': DEFAULT_FALSE,
   },
+  'van-cascader': {
+    options: DEFAULT_EMPTY_ARRAY,
+    placeholder: singleQuote('请选择'),
+    swipeable: DEFAULT_FALSE,
+    closeable: DEFAULT_TRUE,
+    'show-header': DEFAULT_TRUE,
+    'close-icon': singleQuote('cross'),
+    'field-names': "{text:'text',value:'value',children:'children'}"
+  },
   'van-icon': {
     dot: DEFAULT_FALSE,
     color: singleQuote('inherit'),
@@ -47,6 +59,7 @@ export const COMPONENTS = {
     fit: singleQuote('fill'),
     radius: '0',
     round: DEFAULT_FALSE,
+    webp: DEFAULT_FALSE,
     'lazy-load': DEFAULT_FALSE,
     'show-error': DEFAULT_TRUE,
     'show-loading': DEFAULT_TRUE,
@@ -66,7 +79,9 @@ export const COMPONENTS = {
     'close-icon': singleQuote('cross'),
     'safe-area-inset-bottom': DEFAULT_TRUE,
     'safe-area-inset-top': DEFAULT_FALSE,
+    'safe-area-tab-bar': DEFAULT_FALSE,
     'lock-scroll': DEFAULT_TRUE,
+    'root-portal': DEFAULT_FALSE
   },
   'van-transition': {
     name: singleQuote('fade'),
@@ -98,6 +113,7 @@ export const COMPONENTS = {
     // 'range-prompt': '选择天数不能超过 xx 天',
     'show-range-prompt': DEFAULT_TRUE,
     'allow-same-day': DEFAULT_FALSE,
+    'min-range': '1'
   },
   'van-checkbox': {
     shape: singleQuote('round'),
@@ -161,9 +177,10 @@ export const COMPONENTS = {
     cursor: '-1',
     'clear-trigger': singleQuote('focus'),
     'always-embed': DEFAULT_FALSE,
+    'extra-event-params': DEFAULT_FALSE
   },
   'van-picker': {
-    columns: '[]',
+    columns: DEFAULT_EMPTY_ARRAY,
     'show-toolbar': DEFAULT_FALSE,
     'toolbar-position': singleQuote('top'),
     loading: DEFAULT_FALSE,
@@ -268,12 +285,15 @@ export const COMPONENTS = {
     disabled: DEFAULT_FALSE,
     'show-upload': DEFAULT_TRUE,
     deletable: DEFAULT_TRUE,
-    capture: "['album', 'camera']",
+    capture: "['album','camera']",
     'image-fit': singleQuote('scaleToFill'),
     'upload-icon': singleQuote('plus'),
+    'max-duration': '60',
+    'media-type': "['image','video']",
+    showmenu: DEFAULT_TRUE
   },
   'van-action-sheet': {
-    actions: '[]',
+    actions: DEFAULT_EMPTY_ARRAY,
     'z-index': '100',
     round: DEFAULT_TRUE,
     'close-on-click-action': DEFAULT_TRUE,
@@ -308,13 +328,16 @@ export const COMPONENTS = {
     duration: '200',
     direction: singleQuote('down'),
     overlay: DEFAULT_TRUE,
+    'safe-area-tab-bar': DEFAULT_FALSE,
     'close-on-click-overlay': DEFAULT_TRUE,
     'close-on-click-outside': DEFAULT_TRUE,
   },
   'van-dropdown-item': {
     // title: singleQuote('当前选中项文字'),
-    options: '[]',
+    options: DEFAULT_EMPTY_ARRAY,
     disabled: DEFAULT_FALSE,
+    'use-before-toggle': DEFAULT_FALSE,
+    'root-portal': DEFAULT_FALSE
   },
   'van-loading': {
     // color: singleQuote('#c9c9c9'),
@@ -328,9 +351,10 @@ export const COMPONENTS = {
     'z-index': '1',
     duration: '0.3',
     'lock-scroll': DEFAULT_TRUE,
+    'root-portal': DEFAULT_FALSE
   },
   'van-share-sheet': {
-    options: '[]',
+    options: DEFAULT_EMPTY_ARRAY,
     'cancel-text': singleQuote('取消'),
     duration: '300',
     overlay: DEFAULT_TRUE,
@@ -408,7 +432,7 @@ export const COMPONENTS = {
   },
   'van-steps': {
     active: '0',
-    steps: '[]',
+    steps: DEFAULT_EMPTY_ARRAY,
     direction: singleQuote('horizontal'),
     // 'active-color': singleQuote('#07c160'),
     // 'inactive-color': singleQuote('#969799'),
@@ -482,6 +506,7 @@ export const COMPONENTS = {
     'lazy-render': DEFAULT_TRUE,
     'swipe-threshold': '5',
     'z-index': '1',
+    'use-before-change': DEFAULT_FALSE
   },
   'van-tab': {
     // name: '标签的索引值',
@@ -499,9 +524,10 @@ export const COMPONENTS = {
   'van-tabbar-item': {
     // name: '当前标签的索引值',
     'icon-prefix': singleQuote('van-icon'),
+    'link-type': singleQuote('redirectTo')
   },
   'van-tree-select': {
-    items: '[]',
+    items: DEFAULT_EMPTY_ARRAY,
     height: '300',
     'main-active-index': '0',
     'active-id': '0',
@@ -510,7 +536,7 @@ export const COMPONENTS = {
   },
   'van-area': {
     'columns-num': '3',
-    'columns-placeholder': '[]',
+    'columns-placeholder': DEFAULT_EMPTY_ARRAY,
     loading: DEFAULT_FALSE,
     'item-height': '44',
     'visible-item-count': '6',
@@ -565,6 +591,7 @@ export const COMPONENTS = {
 
 export const NEST_ELEMENTS = {
   'van-button': 1,
+  'van-cascader': 1,
   'van-icon': 1,
   'van-image': 1,
   'van-toast': 1,
