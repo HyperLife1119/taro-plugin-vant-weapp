@@ -446,7 +446,7 @@ export const COMPONENTS = {
     plain: DEFAULT_FALSE,
     round: DEFAULT_FALSE,
     mark: DEFAULT_FALSE,
-    'text-color': singleQuote('white'),
+    // 'text-color': singleQuote('white'),
     closeable: DEFAULT_FALSE,
   },
   'van-grid': {
