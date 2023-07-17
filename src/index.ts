@@ -26,12 +26,12 @@ export default (context: IPluginContext, options: Options) => {
     const wxsNewSource = wxsOriginSource.replace(
       'module.exports = {',
       `module.exports = {
-  getDate: getDate,
-  getTime: function (date) { date ? date.getTime() : getDate().getTime(); },
+  date: getDate,
+  datetime: function (date) { return date ? date.getTime() : getDate().getTime(); },
   today: getDate().setHours(0, 0, 0, 0),
-  fullYear: getDate().getFullYear(),
+  year: getDate().getFullYear(),
   month: getDate().getMonth(),
-  date: getDate().getDate(),`
+  day: getDate().getDate(),`
     );
     assets['utils.wxs'] = {
       size: () => wxsNewSource.length,

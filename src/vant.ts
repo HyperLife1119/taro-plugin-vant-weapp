@@ -93,7 +93,7 @@ export const COMPONENTS = {
     title: singleQuote('日期选择'),
     // color: singleQuote('#ee0a24'),
     'min-date': 'xs.today', // 今天
-    'max-date': 'xs.getTime(xs.getDate(xs.fullYear, xs.month + 6, xs.date))', // 六个月后
+    'max-date': 'xs.datetime(xs.date(xs.year, xs.month + 6, xs.day))', // 六个月后
     // 'default-date': '今天',
     'row-height': '64',
     poppable: DEFAULT_TRUE,
@@ -132,8 +132,8 @@ export const COMPONENTS = {
   },
   'van-datetime-picker': {
     type: singleQuote('datetime'),
-    'min-date': 'xs.getTime(xs.getDate(xs.fullYear - 10, 0, 1))', // 十年前
-    'max-date': 'xs.getTime(xs.getDate(xs.fullYear + 10, 11, 31))', // 十年后
+    'min-date': 'xs.datetime(xs.date(xs.year - 10, 0, 1))', // 十年前
+    'max-date': 'xs.datetime(xs.date(xs.year + 10, 11, 31))', // 十年后
     'min-hour': '0',
     'max-hour': '23',
     'min-minute': '0',
