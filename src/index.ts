@@ -1,5 +1,6 @@
 import type { IPluginContext, TaroPlatformBase } from '@tarojs/service';
-import { COMPONENTS, NEST_ELEMENTS } from './vant';
+import { COMPONENTS } from './component';
+import { NEST_ELEMENTS } from './nest-element';
 
 interface Options {
   components: Record<string, Record<string, any>>;
