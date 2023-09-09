@@ -1,10 +1,12 @@
 import type { IPluginContext, TaroPlatformBase } from '@tarojs/service';
 import { COMPONENTS } from './component';
 import { NEST_ELEMENTS } from './nest-element';
+import { VOID_ELEMENTS } from './void-elemets';
 
 interface Options {
   components: Record<string, Record<string, any>>;
   nestElements: Record<string, number>;
+  voidElements: string[];
 }
 
 export default (context: IPluginContext, options: Options) => {
@@ -18,6 +20,11 @@ export default (context: IPluginContext, options: Options) => {
       const nestElements = Object.assign(NEST_ELEMENTS, options.nestElements);
       Object.keys(nestElements).forEach(key => {
         template.nestElements.set(key, nestElements[key]);
+      });
+
+      const voidElements = VOID_ELEMENTS.concat(options.voidElements ?? []);
+      voidElements.forEach(element => {
+        template.voidElements.add(element);
       });
     }
   });

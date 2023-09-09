@@ -36,4 +36,5 @@ module.exports = {
 | 参数         | 类型                                  | 描述                   |
 | ------------ | ------------------------------------- | ---------------------- |
 | components   | `Record<string, Record<string, any>>` | 修改、新增组件的属性   |
-| nestElements | `Record<string, number>`              | 设置组件模版的循环次数 |
+| nestElements | `Record<string, number>`              | 组件模版的循环次数     |
+| voidElements | `string[]`                            | 组件是否可以渲染子元素 |
