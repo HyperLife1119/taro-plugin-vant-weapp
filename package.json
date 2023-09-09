@@ -1,6 +1,6 @@
 {
   "name": "taro-plugin-vant-weapp",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "A taro plugin to improve vant-weapp experience in taro.",
   "main": "dist/index.js",
   "files": [
