@@ -5,6 +5,8 @@ const DEFAULT_FALSE = '!1';
 const DEFAULT_EMPTY_ARRAY = '[]';
 
 // 同步版本：v1.10.25
+// NOTE:
+// 颜色，尺寸是通过 CSS variable 实现默认值的，不需要在这里做默认值的维护
 
 /** VANT 所有组件及其有默认值的属性 */
 export const COMPONENTS: Record<string, Record<string, any>> = {
@@ -20,7 +22,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     hairline: DEFAULT_FALSE,
     loading: DEFAULT_FALSE,
     'loading-type': singleQuote('circular'),
-    'loading-size': singleQuote('20px'),
+    // 'loading-size': singleQuote('20px'),
     lang: singleQuote('en'),
     // 'send-message-title': singleQuote('当前标题'),
     // 'send-message-path': singleQuote('当前分享路径'),
@@ -123,7 +125,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     'label-position': singleQuote('right'),
     'use-icon-slot': DEFAULT_FALSE,
     // 'checked-color': singleQuote('#1989fa'),
-    'icon-size': singleQuote('20px'),
+    // 'icon-size': singleQuote('20px'),
   },
   'van-checkbox-group': {
     disabled: DEFAULT_FALSE,
@@ -200,14 +202,14 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     disabled: DEFAULT_FALSE,
     'label-disabled': DEFAULT_FALSE,
     'label-position': singleQuote('right'),
-    'icon-size': singleQuote('20px'),
+    // 'icon-size': singleQuote('20px'),
     // 'checked-color': singleQuote('#1989fa'),
     'use-icon-slot': DEFAULT_FALSE,
   },
   'van-rate': {
     count: '5',
-    size: singleQuote('20px'),
-    gutter: singleQuote('4px'),
+    // size: singleQuote('20px'),
+    // gutter: singleQuote('4px'),
     // color: singleQuote('#ffd21e'),
     // 'void-color': singleQuote('#c7c7c7'),
     icon: singleQuote('star'),
@@ -244,7 +246,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     max: '100',
     min: '0',
     step: '1',
-    'bar-height': singleQuote('2px'),
+    // 'bar-height': singleQuote('2px'),
     // 'active-color': singleQuote('#1989fa'),
     // 'inactive-color': singleQuote('#e5e5e5'),
     'use-slot-button': DEFAULT_FALSE,
@@ -259,8 +261,8 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     disabled: DEFAULT_FALSE,
     'disable-input': DEFAULT_FALSE,
     'async-change': DEFAULT_FALSE,
-    'input-width': singleQuote('32px'),
-    'button-size': singleQuote('28px'),
+    // 'input-width': singleQuote('32px'),
+    // 'button-size': singleQuote('28px'),
     'show-plus': DEFAULT_TRUE,
     'show-minus': DEFAULT_TRUE,
     'long-press': DEFAULT_TRUE,
@@ -270,7 +272,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     checked: DEFAULT_FALSE,
     loading: DEFAULT_FALSE,
     disabled: DEFAULT_FALSE,
-    size: singleQuote('30px'),
+    // size: singleQuote('30px'),
     // 'active-color': singleQuote('#1989fa'),
     // 'inactive-color': singleQuote('#fff'),
     'active-value': DEFAULT_TRUE,
@@ -279,7 +281,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
   'van-uploader': {
     accept: singleQuote('image'),
     sizeType: "['original','compressed']",
-    'preview-size': singleQuote('80px'),
+    // 'preview-size': singleQuote('80px'),
     'preview-image': DEFAULT_TRUE,
     'preview-full-image': DEFAULT_TRUE,
     multiple: DEFAULT_FALSE,
@@ -302,7 +304,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     'safe-area-inset-bottom': DEFAULT_TRUE,
   },
   'van-dialog': {
-    width: singleQuote('320px'),
+    // width: singleQuote('320px'),
     theme: singleQuote('default'),
     'message-align': singleQuote('center'),
     'z-index': '100',
@@ -344,8 +346,8 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
   'van-loading': {
     // color: singleQuote('#c9c9c9'),
     type: singleQuote('circular'),
-    size: singleQuote('30px'),
-    'text-size': singleQuote('14px'),
+    // size: singleQuote('30px'),
+    // 'text-size': singleQuote('14px'),
     vertical: DEFAULT_FALSE,
   },
   'van-overlay': {
@@ -413,7 +415,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
   'van-progress': {
     inactive: DEFAULT_FALSE,
     percentage: '0',
-    'stroke-width': singleQuote('4px'),
+    // 'stroke-width': singleQuote('4px'),
     'show-pivot': DEFAULT_TRUE,
     // color: singleQuote('#1989fa'),
     // 'text-color': singleQuote('#fff'),
@@ -427,7 +429,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     title: DEFAULT_FALSE,
     'title-width': singleQuote('40%'),
     avatar: DEFAULT_FALSE,
-    'avatar-size': singleQuote('32px'),
+    // 'avatar-size': singleQuote('32px'),
     'avatar-shape': singleQuote('round'),
     loading: DEFAULT_TRUE,
     animate: DEFAULT_TRUE,
@@ -453,7 +455,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
   },
   'van-grid': {
     'column-num': '4',
-    'icon-size': singleQuote('28px'),
+    // 'icon-size': singleQuote('28px'),
     gutter: '0',
     border: DEFAULT_TRUE,
     center: DEFAULT_TRUE,
@@ -498,8 +500,8 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     // color: singleQuote('#ee0a24'),
     active: '0',
     duration: '0.3',
-    'line-width': singleQuote('40px'),
-    'line-height': singleQuote('3px'),
+    // 'line-width': singleQuote('40px'),
+    // 'line-height': singleQuote('3px'),
     animated: DEFAULT_FALSE,
     border: DEFAULT_FALSE,
     ellipsis: DEFAULT_TRUE,
