@@ -301,6 +301,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     'z-index': '100',
     round: DEFAULT_TRUE,
     'close-on-click-action': DEFAULT_TRUE,
+    'close-on-click-overlay': DEFAULT_TRUE,
     'safe-area-inset-bottom': DEFAULT_TRUE,
   },
   'van-dialog': {
