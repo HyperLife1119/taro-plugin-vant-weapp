@@ -501,7 +501,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     // color: singleQuote('#ee0a24'),
     active: '0',
     duration: '0.3',
-    // 'line-width': singleQuote('40px'),
+    'line-width': singleQuote('40px'),
     // 'line-height': singleQuote('3px'),
     animated: DEFAULT_FALSE,
     border: DEFAULT_FALSE,
