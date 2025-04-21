@@ -4,7 +4,7 @@ const DEFAULT_TRUE = '!0';
 const DEFAULT_FALSE = '!1';
 const DEFAULT_EMPTY_ARRAY = '[]';
 
-// 同步版本：v1.10.25
+// 同步版本：v1.11.7
 // NOTE:
 // 颜色，尺寸是通过 CSS variable 实现默认值的，不需要在这里做默认值的维护
 
@@ -47,6 +47,7 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     placeholder: singleQuote('请选择'),
     swipeable: DEFAULT_FALSE,
     closeable: DEFAULT_TRUE,
+    ellipsis: DEFAULT_TRUE,
     'show-header': DEFAULT_TRUE,
     'close-icon': singleQuote('cross'),
     'field-names': "{text:'text',value:'value',children:'children'}"
@@ -294,7 +295,9 @@ export const COMPONENTS: Record<string, Record<string, any>> = {
     'max-duration': '60',
     'media-type': "['image','video']",
     showmenu: DEFAULT_TRUE,
-    'video-fit': singleQuote('contain')
+    'video-fit': singleQuote('contain'),
+    'preview-file': DEFAULT_TRUE,
+    'referrer-policy': singleQuote('no-referrer'),
   },
   'van-action-sheet': {
     actions: DEFAULT_EMPTY_ARRAY,
